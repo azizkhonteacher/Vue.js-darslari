@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue js ga kirish</title>
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{title}}</h1>
+      <h1>{{this.title}}</h1>
+      <p>{{langs}}</p>
+      <h2>{{user.name}}</h2>
+      <h2>{{user.age}}</h2>
+
+      <h1>{{count}}</h1>
+      <button v-on:click="count++">add count</button>
+
+      <h4>{{count}}</h4>
+      <button v-on:click="addCount()">add count</button>
+
+      <ul>
+        <li v-for="(item, i) in langs" v-bind:key="i">{{item}}</li>
+      </ul>
+      <ul>
+        <li v-for="(item, i) in User" v-bind:key="i">ismi: {{item.name}} <br> yoshi: {{item.age}}</li>
+      </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
